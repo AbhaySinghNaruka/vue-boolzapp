@@ -16,4 +16,52 @@ body {
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    display: flex;
+}
+
+.left-bar {
+    background-color: green;
+    width: 30%;
+    height: 100%;
+}
+
+.my-profile {
+    height: 70px;
+    background-color: pink;
+}
+
+.notifications {
+    background-color: cyan;
+    height: 80px;
+}
+
+.search-bar {
+    background-color: magenta;
+    height: 50px;
+}
+
+.person {
+    background-color: orange;
+    height: 90px;
+}
+
+.chat {
+    background-color: lightblue;
+    width: 70%;
+    height: 100%;
+}
+
+.person-open-chat {
+    height: 70px;
+    background-color: sienna;
+}
+
+.chat-container {
+    height: calc(100% - 70px - 70px);
+    background-color: deepskyblue;
+}
+
+.chat-text-input {
+    background-color:crimson;
+    height: 70px;
 }
