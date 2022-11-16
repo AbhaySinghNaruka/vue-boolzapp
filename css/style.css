@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgb(36, 150, 136) 15vh, rgb(255, 255, 255) 1vh);
+}
+
+.container {
+    background-color: red;
+    height: 90%;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
