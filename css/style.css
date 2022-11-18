@@ -24,14 +24,14 @@ body {
 }
 
 .left-bar {
-    background-color: green;
+    background-color: rgb(230, 230, 230);
     width: 30%;
     height: 100%;
 }
 
 .my-profile {
     height: 70px;
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
 }
 
@@ -49,15 +49,15 @@ body {
 }
 
 .notifications {
-    background-color: cyan;
+    background-color: rgb(146, 255, 255);
     height: 80px;
     display: flex;
 }
 
 .bell-icon {
-    background-color: black;
+    background-color: white;
     padding: 15px 12px;
-    color: white;
+    color: rgb(146, 255, 255);
     border-radius: 100%;
     font-size: 25px;
     margin-top: 12px;
@@ -71,13 +71,13 @@ body {
 }
 
 .search-bar {
-    background-color: magenta;
+    /* background-color: magenta; */
     height: 50px;
 }
 
 .search-bar-input {
     padding: 8px;
-    background-color: red;
+    /* background-color: red; */
     height: 100%;
     display: flex;
 }
@@ -97,13 +97,20 @@ body {
 }
 
 .person {
-    background-color: orange;
+    /* background-color: orange; */
     height: 90px;
 }
 
-.person-container {
+.persons-container {
+    overflow-y: scroll;
+    height: 684px;
+}
+
+.user-container {
     display: flex;
     padding: 15px;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
 }
 
 .person-pic {

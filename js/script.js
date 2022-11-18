@@ -1,5 +1,5 @@
 new Vue({
-    el: "#root",
+    el: "#app",
     data: {
       contacts: [
         {
@@ -164,8 +164,8 @@ new Vue({
           ],
         },
       ],
-
-      activeIndex: 0,
-      newMsg: '',
     },
+    methods: {
+
+    }
 });
