@@ -28,9 +28,6 @@
                     <a href="">Attiva notifiche desktop</a>
                 </div>
             </div>
-            <div id="root">
-                
-            </div>
             <div class="search-bar">
                 <div class="search-bar-input">
                     <div class="search-container">
@@ -44,13 +41,16 @@
             </div>
             <div class="persons-container">
                 <div class="person">
-                    <div v-for="contact in contacts" :key="contact.avatar" class="contact">
-                        <div class="user-container">
-                            <img class="person-pic" src="img/New-Project-14.png" alt="">
-                            <div class="info-person">
-                                {{ contact.name }}
-                                <div class="last-message">
-                                    Last message
+                    <div 
+                    v-for="(contact, i) in contacts":key="contact.avatar"class="contact"@click="setActiveIndex(i)">
+                        <div v-for="contact in contacts"class="contact">
+                            <div class="user-container">
+                                <img class="person-pic" src="img/New-Project-14.png" alt="">
+                                <div class="info-person">
+                                    {{ contact.name }}
+                                    <div class="last-message">
+                                        Last message
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -64,13 +64,23 @@
             <div class="person-open-chat">
                 <img class="chat-profile-pic" src="img/New-Project-14.png" alt="">
                 <div class="info-person">
-                    <!-- {{ contact.name }} --> Nome
+                    {{ contacts[activeIndex].name }}
                     <div class="last-login">
                         Last login
                     </div>
                 </div>
+                <div class="user-info">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
             </div>
-            <div class="chat-container"></div>
+            <div class="chat-container">
+                <div class="messages">
+                    <div class="message message-sent">we</div>
+                    <div class="message message-received">we</div>
+                </div>
+            </div>
             <div class="chat-text-input">
                 <div class="emoji"></div>
                 <div class="type-text"></div>

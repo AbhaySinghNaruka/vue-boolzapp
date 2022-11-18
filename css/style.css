@@ -11,27 +11,24 @@ a {
 body {
     height: 100vh;
     background-image: linear-gradient(rgb(36, 150, 136) 15vh, rgb(255, 255, 255) 1vh);
+    padding: 50px;
 }
 
 .container {
     background-color: red;
-    height: 90%;
+    height: 100%;
     width: 75%;
     margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
     display: flex;
 }
 
 .left-bar {
     background-color: rgb(230, 230, 230);
     width: 30%;
-    height: 100%;
 }
 
 .my-profile {
     height: 70px;
-    /* background-color: pink; */
     display: flex;
 }
 
@@ -49,7 +46,7 @@ body {
 }
 
 .notifications {
-    background-color: rgb(146, 255, 255);
+    background-color: #FFFFFF;
     height: 80px;
     display: flex;
 }
@@ -71,13 +68,11 @@ body {
 }
 
 .search-bar {
-    /* background-color: magenta; */
     height: 50px;
 }
 
 .search-bar-input {
     padding: 8px;
-    /* background-color: red; */
     height: 100%;
     display: flex;
 }
@@ -97,13 +92,17 @@ body {
 }
 
 .person {
-    /* background-color: orange; */
     height: 90px;
 }
 
+.user-info {
+    margin-left: auto;
+    line-height: 1;
+}
+
 .persons-container {
+    height: auto;
     overflow-y: scroll;
-    height: 684px;
 }
 
 .user-container {
@@ -131,6 +130,7 @@ body {
     background-color: sienna;
     display: flex;
     padding: 5px;
+    align-items: center;
 }
 
 .chat-profile-pic {
@@ -143,6 +143,26 @@ body {
 .chat-container {
     height: calc(100% - 70px - 70px);
     background-color: deepskyblue;
+    padding: 50px 70px;
+}
+
+.messages {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+}
+
+.message {
+    position: relative;
+    width: 35%;
+}
+
+.message.message-sent {
+    align-self: flex-end;
+}
+
+.message.message-received {
+    align-self: flex-start;
 }
 
 .chat-text-input {
