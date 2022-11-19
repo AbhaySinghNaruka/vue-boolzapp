@@ -171,6 +171,5 @@ new Vue({
       setActiveIndex(index) {
         this.activeIndex = index;
       },
-      
-    }
+    },
 });

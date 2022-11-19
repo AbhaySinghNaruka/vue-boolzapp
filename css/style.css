@@ -113,6 +113,10 @@ body {
     margin-right: 15px;
 }
 
+.last-message {
+    font-size: 12px;
+}
+
 .chat {
     background-color: lightblue;
     width: 70%;
@@ -150,6 +154,7 @@ body {
 .message {
     position: relative;
     width: 35%;
+    margin-bottom: 15px;
 }
 
 .message.message-sent {

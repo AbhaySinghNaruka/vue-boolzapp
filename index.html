@@ -49,9 +49,9 @@
                             <div class="user-container">
                                 <img class="person-pic" src="img/New-Project-14.png" alt="">
                                 <div class="info-person">
-                                    {{ contact.name }}
+                                    <strong>{{ contact.name }}</strong>
                                     <div class="last-message">
-                                        Last message
+                                        {{contact.messages[contact.messages.length -1].message}}
                                     </div>
                                 </div>
                             </div>
@@ -77,10 +77,13 @@
                 </div>
             </div>
             <div class="chat-container">
-                <div class="messages">
-                    
-                    <div class="message message-sent">{{ contacts[activeIndex].messages[0].message }}</div>
-                    <div class="message message-received"></div>
+                <div class="messages" v-for = "msg in contacts[activeIndex].messages">
+                    <div class="message message-sent" v-if = "msg.status === 'sent'">
+                        {{ msg.message }}
+                    </div>
+                    <div class="message message-received" v-else = "">
+                        {{ msg.message }}
+                    </div>
                 </div>
             </div>
             <div class="chat-text-input">
