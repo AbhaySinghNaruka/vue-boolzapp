@@ -7,11 +7,12 @@
 
 a {
     text-decoration: none;
+    
 }
 
 body {
     height: 100vh;
-    background-image: linear-gradient(rgb(36, 150, 136) 15vh, rgb(255, 255, 255) 1vh);
+    background-image: linear-gradient(rgb(36, 150, 136) 15vh, #DBDBD2 1vh);
     padding: 50px;
 }
 
@@ -85,6 +86,10 @@ body {
     margin-top: 8px;
 }
 
+.search-icon:hover {
+    cursor: pointer;
+}
+
 .search-input {
     width: 70%;
 }
@@ -117,6 +122,13 @@ body {
     font-size: 12px;
 }
 
+.msg-date {
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    margin-top: 5px;
+}
+
 .chat {
     background-color: lightblue;
     width: 70%;
@@ -140,8 +152,8 @@ body {
 
 
 .chat-container {
-    height: calc(100% - 70px - 70px);
-    background-color: deepskyblue;
+    height: calc(100% - 70px - 50px);
+    /* background-color: deepskyblue; */
     padding: 50px 70px;
 }
 
@@ -161,6 +173,7 @@ body {
     align-self: flex-end;
     background-color: lightgreen;
     padding: 15px 10px;
+    padding-bottom: 30px;
     border-radius: 15px;
 }
 
@@ -169,9 +182,54 @@ body {
     background-color: white;
     padding: 15px 10px;
     border-radius: 15px;
+    padding-bottom: 30px;
 }
 
 .chat-text-input {
-    background-color:crimson;
-    height: 70px;
+    background-color:white;
+    height: 50px;
+    display: flex;
+}
+
+.emoji {
+    width: 12%;
+    height: 100%;
+   /*  background-color: black; */
+   line-height: 50px;
+   text-align: center;
+   font-size: 25px;
+   color: lightgray;
+}
+
+.type-text {
+    width: 76%;
+    height: 100%;
+    /* background-color: magenta; */
+    line-height: 50px;
+}
+
+.send-msg {
+    width: 100%
+}
+
+.audio {
+    width: 12%;
+    height: 100%;
+    /* background-color: black; */
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    color: lightgray;
+}
+
+.audio:hover {
+    cursor: pointer;
+}
+
+.emoji:hover {
+    cursor: pointer;
+}
+
+.user-container:hover {
+    cursor: pointer;
 }

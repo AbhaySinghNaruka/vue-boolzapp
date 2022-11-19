@@ -20,7 +20,7 @@
         <div class="left-bar">
             <div class="my-profile">
                 <img class="profile-pic" src="img/New-Project-14.png" alt="">
-                <div class="name">Abhay</div>
+                <div class="name"><strong>Abhay</strong></div>
             </div>
             <div class="notifications">
                 <i class="fa-solid fa-bell-slash bell-icon"></i>
@@ -34,9 +34,7 @@
             <div class="search-bar">
                 <div class="search-bar-input">
                     <div class="search-container">
-                        <a href="">
                             <i class="fas fa-search search-icon"></i>
-                        </a>
                     </div>
                     <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat">
                     
@@ -79,17 +77,27 @@
             <div class="chat-container">
                 <div class="messages" v-for = "msg in contacts[activeIndex].messages">
                     <div class="message message-sent" v-if = "msg.status === 'sent'">
-                        {{ msg.message }}
+                        {{ msg.message }} 
+                        <div class="msg-date">
+                            {{ msg.date }}
+                        </div>
                     </div>
                     <div class="message message-received" v-else = "">
-                        {{ msg.message }}
+                        {{ msg.message }} 
+                        <div class="msg-date">
+                            {{ msg.date }}
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="chat-text-input">
-                <div class="emoji"></div>
-                <div class="type-text"></div>
-                <div class="audio"></div>
+                <div class="emoji">
+                    <i class="far fa-smile"></i>
+                </div>
+                <input type="text" class="send-msg"placeholder="Cerca o inizia una nuova chat">
+                <div class="audio">
+                    <i class="fa fa-microphone"></i>
+                </div>
             </div>
         </div>
     </div>
