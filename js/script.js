@@ -166,10 +166,29 @@ new Vue({
       ],
       activeIndex: 0,
 		  newMessage: '',
+      findUser: '',
+      currentTime: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
     },
     methods: {
       setActiveIndex(index) {
         this.activeIndex = index;
+      },
+      
+      sendMessage() {
+        this.contacts[this.activeIndex].messages.push({
+          date: this.currentTime,
+          message: this.newMessage,
+          status: 'sent',
+        });
+        this.newMessage = '';
+        const receiverIndex = this.activeIndex; 
+        setTimeout(() => {
+          this.contacts[receiverIndex].messages.push({
+            date: this.currentTime,
+            message: 'Ok',
+            status: 'received',
+          });
+        }, 1000);
       },
     },
 });
