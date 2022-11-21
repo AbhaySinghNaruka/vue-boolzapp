@@ -155,6 +155,7 @@ body {
     height: calc(100% - 70px - 50px);
     /* background-color: deepskyblue; */
     padding: 50px 70px;
+    overflow-y: scroll;
 }
 
 .messages {

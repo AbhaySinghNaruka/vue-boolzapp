@@ -176,7 +176,7 @@ new Vue({
       
       sendMessage() {
         this.contacts[this.activeIndex].messages.push({
-          date: this.currentTime,
+          date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
           message: this.newMessage,
           status: 'sent',
         });
@@ -184,7 +184,7 @@ new Vue({
         const receiverIndex = this.activeIndex; 
         setTimeout(() => {
           this.contacts[receiverIndex].messages.push({
-            date: this.currentTime,
+            date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
             message: 'Ok',
             status: 'received',
           });
