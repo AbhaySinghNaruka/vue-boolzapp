@@ -169,12 +169,14 @@ new Vue({
       findUser: '',
       currentTime: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
     },
+
     methods: {
       setActiveIndex(index) {
         this.activeIndex = index;
       },
       
       sendMessage() {
+        
         this.contacts[this.activeIndex].messages.push({
           date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
           message: this.newMessage,
@@ -190,5 +192,11 @@ new Vue({
           });
         }, 1000);
       },
+    },
+
+    computed: {
+      filteredContacts() {
+        return this.contacts.filter(objContact => objContact.name.trim().toLowerCase().includes(this.findUser.trim().toLowerCase()));
+      }
     },
 });

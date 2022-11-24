@@ -35,25 +35,26 @@
             <div class="search-bar">
                 <div class="search-bar-input">
                     <div class="search-container">
-                            <i class="fas fa-search search-icon"></i>
+                        <i class="fas fa-search search-icon"></i>
                     </div>
-                    <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat" v-model="findUser">
                     
                 </div>
             </div>
             <div class="persons-container">
                 <div class="person">
                     <div 
-                    v-for="(contact, i) in contacts":key="contact.avatar"class="contact"@click="setActiveIndex(i)">
-                            <div class="user-container">
-                                <img class="person-pic" src="img/New-Project-14.png" alt="">
-                                <div class="info-person">
-                                    <strong>{{ contact.name }}</strong>
-                                    <div class="last-message">
-                                        {{contact.messages[contact.messages.length -1].message}}
-                                    </div>
+                    v-for="(contact, i) in filteredContacts":key="contact.avatar"class="contact"@click="setActiveIndex(i)"
+                    >
+                        <div class="user-container">
+                            <img class="person-pic" src="img/New-Project-14.png" alt="">
+                            <div class="info-person">
+                                <strong>{{ contact.name }}</strong>
+                                <div class="last-message">
+                                    {{contact.messages[contact.messages.length -1].message}}
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,6 +89,7 @@
                         <div class="msg-date">
                             {{ msg.date }}
                         </div>
+                        
                     </div>
                 </div>
             </div>
